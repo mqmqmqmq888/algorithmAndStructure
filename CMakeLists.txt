@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.15)
+project(test LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+find_package(OpenCV REQUIRED)
+
+file(GLOB_RECURSE SRC_LIST CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/code/*.cpp"
+)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+add_executable(app ${SRC_LIST})
+
+target_link_libraries(app PRIVATE ${OpenCV_LIBS})

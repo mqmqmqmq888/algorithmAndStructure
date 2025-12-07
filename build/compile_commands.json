@@ -1,0 +1,7 @@
+[
+{
+  "directory": "D:/github/algorithmAndStructure/build",
+  "command": "D:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/app.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles\\app.dir\\code\\01_array\\classImplementation.cpp.obj -c D:\\github\\algorithmAndStructure\\code\\01_array\\classImplementation.cpp",
+  "file": "D:/github/algorithmAndStructure/code/01_array/classImplementation.cpp"
+}
+]
