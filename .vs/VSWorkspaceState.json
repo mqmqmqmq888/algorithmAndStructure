@@ -1,0 +1,16 @@
+{
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "out\\build\\x64-Debug",
+      "out\\install\\x64-Debug"
+    ]
+  },
+  "ExpandedNodes": [
+    "",
+    "\\code",
+    "\\code\\01_array",
+    "\\code\\02_linkedList"
+  ],
+  "SelectedNode": "\\code\\02_linkedList\\singlyCLL.cpp",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,114 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "algorithmAndStructure",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "classImplementation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-classImplementation-Debug-5b56d089f7a435e60774.json",
+					"name" : "classImplementation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "doubleCLL::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doubleCLL-Debug-8d2873064f1995e98d01.json",
+					"name" : "doubleCLL",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "doubleLL::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-doubleLL-Debug-f72c938c3c9d94a4e83d.json",
+					"name" : "doubleLL",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "evenLeftOddRight::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-evenLeftOddRight-Debug-78b8e5b130d0d21e4999.json",
+					"name" : "evenLeftOddRight",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "reverseStr::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-reverseStr-Debug-6445565be8da849571d3.json",
+					"name" : "reverseStr",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "singlyCLL::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-singlyCLL-Debug-110ba0865fd54dec7eb8.json",
+					"name" : "singlyCLL",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "singlyLL::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-singlyLL-Debug-a9cde9c5f061dc157a9b.json",
+					"name" : "singlyLL",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/github/algorithmAndStructure/out/build/x64-Debug",
+		"source" : "D:/github/algorithmAndStructure"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

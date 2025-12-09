@@ -1,3 +1,0 @@
-D:/github/algorithmAndStructure/build/CMakeFiles/app.dir
-D:/github/algorithmAndStructure/build/CMakeFiles/edit_cache.dir
-D:/github/algorithmAndStructure/build/CMakeFiles/rebuild_cache.dir

@@ -1,117 +1,100 @@
 #include <iostream>
 using namespace std;
 
+
 class Array
 {
 public:
-    Array(int size = 0)
-        : size_(size), cap_(10)
-    {
-        arr_ = new int[cap_];
-    }
-
-    ~Array()
-    {
-        delete[] arr_;
-    }
-
+	Array(int size = 10) : size_(0), cap_(size)
+	{
+		array = new int[cap_];
+	}
+	~Array()
+	{
+		delete[] array;
+		array = nullptr;
+	}
 public:
-    void push_back(int val)
-    {
-        if (size_ == cap_)
-        {
-            expand(2 * cap_);
-        }
-        arr_[size_] = val;
-        size_++;
-    }
+	void push_back(int val)
+	{
+		if (size_ == cap_)
+		{
+			expand(2 * cap_);
+		}
+		array[size_++] = val;
+	}
 
-    void pop()
-    {
-        if (size_ != 0)
-        {
-            size_--;
-        }
-    }
+	void pop_back()
+	{
+		if (size_ == 0)
+		{
+			throw "empty array";
+		}
+		size_--;
+	}
 
-    int find(int val)
-    {
-        for (int i = 0; i < size_; i++)
-        {
-            if (arr_[i] == val)
-            {
-                return i;
-            }
-        }
-        return -1;
-    }
+	void insert(int pos, int val)
+	{
+		if (pos<0 || pos>size_)
+		{
+			throw "valid pos";
+		}
+		if (size_ == cap_)
+		{
+			expand(2 * cap_);
+		}
+		for (int i = size_; i >= pos+1; i--)
+		{
+			array[i] = array[i - 1];
+		}
+		array[pos] = val;
+		size_++;
+	}
+	void erase(int pos)
+	{
+		if (pos<0 || pos>=size_)
+		{
+			throw "valid pos";
+		}
+		for (int i = pos+1; i < size_; i++)
+		{
+			array[i-1] = array[i];
+		}
+		size_--;
+	}
 
-    void insert(int pos, int val)
-    {
-        if (size_ == cap_)
-        {
-            expand(2 * cap_);
-        }
-        for (int i = size_; i >= pos; i++)
-        {
-            arr_[i] = arr_[i - 1];
-        }
-        arr_[pos] = val;
-        size_++;
-    }
+	void show()
+	{
+		for (int i = 0; i < size_; i++)
+		{
+			cout << array[i] << " ";
+		}
+		cout << endl;
+	}
 
-    int erase(int pos)
-    {
-        if (size_ == 0)
-        {
-            throw "size is empty";
-        }
-        for (int i = pos; i < size_ - 1; i++)
-        {
-            arr_[i] = arr_[i + 1];
-        }
-        size_--;
-    }
-    void showInfo()
-    {
-        for (int i = 0; i < size_; i++)
-        {
-            cout << arr_[i] << " ";
-        }
-        cout << endl;
-    }
 
-    int &operator[](int index)
-    {
-        if (index < 0 || index > size_ - 1)
-        {
-            throw "valid index";
-        }
-        return arr_[index];
-    }
 
 private:
-    void expand(int size)
-    {
-        int *p = new int[size];
-        memcpy(p, arr_, size_ * sizeof(int));
-        delete[] arr_;
-        arr_ = p;
-        cap_ = size;
-    }
-
+	void expand(int size)
+	{
+		int* p = new int[size];
+		memcpy(p, array, size_ * sizeof(int));
+		delete[] array;
+		array = p;
+		cap_ = size;
+	}
 private:
-    int *arr_;
-    int size_;
-    int cap_;
+	int* array;
+	int size_;
+	int cap_;
 };
 
 int main()
 {
-    Array arr;
-    for (int i = 0; i < 10; i++)
-    {
-        arr.push_back(i);
-    }
-    arr.showInfo();
+	Array arr;
+	for (int i = 0; i < 10; i++)
+	{
+		arr.push_back(i);
+	}
+
 }
